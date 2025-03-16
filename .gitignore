@@ -1,0 +1,37 @@
+# Unreal Engine generated files
+*.uasset
+*.umap
+*.upk
+*.udk
+
+# Compiled files
+*.dll
+*.pdb
+*.so
+*.dylib
+
+# Logs and temporary files
+*.log
+.urc/
+
+# Visual Studio files
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+.vs/
+
+# UEFN specific
+*.urcproject
+*.urcprofile
+.urcignore
+
+# UEFN workspace and plugin settings
+*.code-workspace
+*.uplugin
+
+# OS specific
+.DS_Store
+Thumbs.db

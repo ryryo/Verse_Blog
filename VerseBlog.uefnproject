@@ -1,0 +1,45 @@
+{
+	"fileVersion": 15,
+	"versionSuffix": "",
+	"title": "VerseBlog",
+	"description": "",
+	"keyArt": "Resources/CEUEFN.png",
+	"docsUrl": "",
+	"kind": "Island",
+	"compatibilityVersion": "34.10",
+	"requiredRedirectorStartingVersion": "34.10.40567068",
+	"editorPermissions": [],
+	"epicApp": "",
+	"sortPriority": 0,
+	"featureSet": "",
+	"plugins": [
+		{
+			"name": "VerseBlog",
+			"bIsRoot": true,
+			"bIsPublic": false
+		}
+	],
+	"dataSets":
+	{
+		"matchmaking":
+		{
+			"maxPlayers": 16,
+			"maxTeamCount": 16,
+			"maxTeamSize": 16,
+			"maxSocialPartySize": 16,
+			"allowJoinInProgress": true,
+			"allowSquadFillOption": false,
+			"islandQueuePrivacy": "Unrestricted",
+			"version": 1
+		}
+	},
+	"bindings":
+	{
+		"projectId": "8920a594-4711-b331-319e-1c8730b31621",
+		"projectVersePath": "/codelink@fortnite.com/VerseBlog",
+		"modules":
+		{
+			"VerseBlog": "689a6f8a-422e-0e47-cff1-e6ba215e094c"
+		}
+	}
+}

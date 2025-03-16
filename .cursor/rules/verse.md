@@ -19,6 +19,7 @@
   - オプション型からの値の取得（値がない場合に失敗）
   - `<decides>`エフェクト指定子を持つ関数の呼び出し
   - 一部のデバイスメソッド（例：`GetFortCharacter[]`）
+  - マップへの代入操作（例：`map[key] = value`）
 
 - 失敗コンテキストとして機能するVerseの構文：
   1. `if`文の条件節
@@ -311,3 +312,25 @@ AwaitGameSequence()<suspends>:void=
 - 重要な処理順序は`block`で明示的に表現する
 - 複数の非同期処理の完了を待つ場合は`sync`を使用する
 - 複数の非同期処理のいずれかの完了を待つ場合は`race`を使用する
+
+- **配列操作の注意点**：
+  - 配列の要素を変更する場合も同様に失敗コンテキスト内で行う
+  - ❌ `array += newElement` という操作はVerseでは使用できない
+  - ❌ `.Append(element)`メソッドは存在しない（他の言語との混同に注意）
+  - ❌ `.RemoveElement[element]`メソッドも存在しない（他の言語との混同に注意）
+  - ✅ 正しい使い方（配列を結合する場合）：
+    ```verse
+    # 2つの配列を結合
+    var Combined : []int = array1 + array2
+    
+    # 新しい要素の追加（新しい配列を作成）
+    var NewArray : []int = OldArray + array{NewElement}
+    ```
+  - ✅ 配列から要素を削除する場合（フィルタリングで新しい配列を作成）：
+    ```verse
+    # 特定の要素を除外した新しい配列を作成
+    var FilteredArray : []T = array{}
+    for (Element : OriginalArray):
+        if (Element <> ElementToRemove):
+            set FilteredArray = FilteredArray + array{Element}
+    ```

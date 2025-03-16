@@ -182,13 +182,11 @@ Verseのユーザー編集ファイルは常に「{Verseファイルが設置さ
 ---
 
 # Verseコードスタイルガイドライン
-
 @file:.cursor/rules/verse.md
 
 ---
 
 # VerseAPIドキュメント
-
 @file:docs/Fortnite.digest.verse
 
 APIドキュメントは膨大なので、各デバイスのAPI操作方法が不明な場合に、適宜必要な箇所を参照してください。
